@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UST Student Database</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>University of Science and Technology</h1>
+<h3>Student Database Management System</h3>
+
+<form id="studentForm">
+    <input type="text" id="name" placeholder="Student Name" required>
+    <input type="text" id="matric" placeholder="Matric Number" required>
+    <input type="text" id="course" placeholder="Course" required>
+    <select id="activity">
+        <option>Attendance</option>
+        <option>Assignment Submitted</option>
+        <option>Test Completed</option>
+        <option>Exam Written</option>
+    </select>
+    <button type="submit">Save Record</button>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Matric No</th>
+            <th>Course</th>
+            <th>Activity</th>
+        </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>
