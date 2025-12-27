@@ -1,36 +1,22 @@
 const form = document.getElementById("studentForm");
-const table = document.getElementById("tableBody");
+const table = document.getElementById("studentTable");
 
-let students = JSON.parse(localStorage.getItem("students")) || [];
-
-function displayStudents() {
-    table.innerHTML = "";
-    students.forEach(s => {
-        table.innerHTML += `
-            <tr>
-                <td>${s.name}</td>
-                <td>${s.matric}</td>
-                <td>${s.course}</td>
-                <td>${s.activity}</td>
-            </tr>
-        `;
-    });
-}
-
-form.addEventListener("submit", e => {
+form.addEventListener("submit", function(e) {
     e.preventDefault();
 
-    const student = {
-        name: name.value,
-        matric: matric.value,
-        course: course.value,
-        activity: activity.value
-    };
+    const name = document.getElementById("name").value;
+    const matric = document.getElementById("matric").value;
+    const course = document.getElementById("course").value;
+    const activity = document.getElementById("activity").value;
 
-    students.push(student);
-    localStorage.setItem("students", JSON.stringify(students));
-    displayStudents();
+    const row = document.createElement("tr");
+    row.innerHTML = `
+        <td>${name}</td>
+        <td>${matric}</td>
+        <td>${course}</td>
+        <td>${activity}</td>
+    `;
+
+    table.appendChild(row);
     form.reset();
 });
-
-displayStudents();

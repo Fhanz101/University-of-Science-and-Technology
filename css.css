@@ -1,12 +1,12 @@
 body {
-    font-family: Arial;
-    background: #eef2f7;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
     padding: 20px;
 }
 
-h1, h2, h3 {
+h1, h3 {
     text-align: center;
-    color: #002855;
+    color: #003366;
 }
 
 form {
@@ -17,16 +17,17 @@ form {
     border-radius: 5px;
 }
 
-input, select, button {
+input, button {
     width: 100%;
     padding: 8px;
     margin: 5px 0;
 }
 
 button {
-    background: #002855;
+    background: #003366;
     color: white;
     border: none;
+    cursor: pointer;
 }
 
 table {
@@ -36,12 +37,12 @@ table {
 }
 
 th, td {
-    border: 1px solid #aaa;
+    border: 1px solid #ccc;
     padding: 8px;
     text-align: center;
 }
 
 th {
-    background: #002855;
+    background: #003366;
     color: white;
 }
